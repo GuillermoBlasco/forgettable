@@ -1,0 +1,47 @@
+{
+  "name": "athenea-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "ts",
+      "quiet": false
+    },
+    "start": {
+      "patterns": [
+        "build"
+      ],
+      "extensions": "js",
+      "quiet": false
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "start": "node build/main.js",
+    "watch": "npm-watch",
+    "watch:build": "npm-watch build",
+    "watch:start": "npm-watch start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@qdrant/js-client-rest": "^1.9.0",
+    "dotenv": "^16.4.5",
+    "mongodb": "6.6",
+    "openai": "^4.47.1",
+    "telegraf": "^4.16.3",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.5",
+    "@types/uuid": "^9.0.8",
+    "npm-watch": "^0.13.0",
+    "typescript": "^5.4.5"
+  }
+}
